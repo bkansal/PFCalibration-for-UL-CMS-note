@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{xcolor}
+%\usepackage[utf8]{inputenc}
+\usepackage{authblk}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{xspace}
+\usepackage[export]{adjustbox}
+\usepackage[italic]{hepnames}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+
+\title{PF hadron Calibration for Ultralegacy} 
+%\title{CMS note}
+\author[1]{Bhumika Kansal }
+\author[2]{Shubham Pandey}
+\author[3]{Seema Sharma}
+\affil[123]{IISER, Pune}
+\date{April 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\vspace*{0.5cm}
+\par
+\large
+Compact Muon Solenoid (CMS) experiment is a general purpose detector at Large Hadron Collider, CERN to detect the particles coming out from the collision of two proton beams at the $\sqrt{13}$ TeV. Particle is detected by measuring momenta and position of particles like electrons, muons, taus, and quarks and gluons which are manifested as jets. Jets are majorly composed of charged and neutral hadrons like $\pi$. To be able to reliably use the jets, their constituents have to be properly calibrated.
+\par
+PF reconstruction algorithm is used to identify and reconstruct each particles in CMS detector correctly. PF algorithm uses the the information from various sub-detectors from CMS and convert particle information into PF candidates. For example, if charged pion is depositing its energy in HCAl and also having associated track, then its PF candidate will be charged hadrons. So PF candidates are basically represents particles at CMS according to sub-detectors information And those PF candidates are reconstructed and properly calibrated by PF Algorithm. Those calibrated PF candidates are used to produce PF Jets.
+\par
+In this note, we will describe the PF calibrations of charged hadrons for Ultra legacy in details. $\pi$\textsuperscript{-} is used for charged hadron calibration because on average 40\% of jet energy at particle level is carried by charged pions.
+
+\begin{figure}[htbp]
+\centering % \begin{center}/\end{center} takes some additional vertical space
+\includegraphics[width=0.45\textwidth]{figures/energy_902.pdf}
+\includegraphics[width=0.45\textwidth]{figures/eta_902.pdf}
+%\includegraphics[width=0.45\textwidth]{figures/phi_902.pdf}
+\caption{\label{fig:1} Jet energy compositopn of }
+\end{figure}
+
+\section{Event Selection}
+\vspace*{0.5cm}
+\par
+\large
+If the event has a track then the quality criteria is as follows:
+
+\begin{itemize}
+\item PF Candidate should be a PF charged hadron.
+\item Transverse momentum $p_T$ of PF charged hadron $\geq$ 1.0 GeV.
+\item Sum of raw ECAL cluster energy and raw HCAL cluster energy $\geq$ 0.5 GeV
+\item Number of associated track should be exactly 1
+\item Total momentum ($p$) as well as transverse momentum ($p_T$) of the track should be greater that 1 GeV.
+\item Number of pixel hits associated to the track should be greater than 2.
+\item Number of total tracker hits should be (NOTE here tracker hits are eta dependent which needs to be enumerated in some consistent way, for example for $0.0 < |\eta| < 1.4$, tracker-hits $>$ 14; $1.4 < |\eta| < 1.6$, tracker-hits $>$ 16 etc.)
+\end{itemize}
+
+\vspace*{0.5cm}
+\par
+\large
+\section{Ultralegacy Timelines and Importance }
+\end{document}
